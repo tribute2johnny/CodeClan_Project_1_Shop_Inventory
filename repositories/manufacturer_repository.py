@@ -20,5 +20,5 @@ def select(id):
 
     if results:
         result = results[0]
-        manufacturer = Manufacturer[result['name'], result["description"], result['id']]
+        manufacturer = Manufacturer(result['name'], result["description"], result['id'])
     return manufacturer

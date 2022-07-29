@@ -21,7 +21,7 @@ def select_all():
 
     for row in results:
         manufacturer = manufacturer_repository.select(row['manufacturer_id'])
-        spaceship = Spaceship(row['model'], row['type'], manufacturer, row['descritption'], row['stock_quantity'], row['buying_cost'], row['selling_price'], row['id'] )
+        spaceship = Spaceship(row['model'], row['type'], manufacturer, row['description'], row['stock_quantity'], row['buying_cost'], row['selling_price'], row['id'] )
         spaceships.append(spaceship)
     return spaceships
 

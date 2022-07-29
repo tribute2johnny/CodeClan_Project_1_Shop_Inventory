@@ -27,6 +27,7 @@ manufacturer_repository.save(manufacturer_5)
 
 
 
+spaceship_repository.select_all()
 #creates some base data for spaceships
 
 spaceship_1 = Spaceship("Vulture", "Fighter", manufacturer_2,  "The Vulture is a ship manufactured by Core Dynamics. The Vulture primarily serves as a heavy space-superiority fighter.", 3, 400600, 623000)

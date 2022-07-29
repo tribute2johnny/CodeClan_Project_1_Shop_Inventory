@@ -6,3 +6,4 @@ from models.spaceship import Spaceship
 from repositories import spaceship_repository, manufacturer_repository
 
 spaceship_blueprint = Blueprint("spaceships", __name__)
+
