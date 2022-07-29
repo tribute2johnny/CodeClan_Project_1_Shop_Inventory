@@ -1,2 +1,5 @@
 # CodeClan_Project_1_Shop_Inventory
-A spaceship shop back end that users can interact with, updating stock and adding ships and manufacturers.
+A spaceship shop back end that sellers can interact with, updating stock and adding ships and manufacturers.
+
+Unittest has been added to test classes. To run unit test open the terminal and enter python_3 run_tests.py.
+The tests just test the functionality of the classes.
