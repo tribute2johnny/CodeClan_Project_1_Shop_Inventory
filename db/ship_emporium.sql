@@ -12,8 +12,8 @@ CREATE TABLE spaceships(
     id SERIAL PRIMARY KEY,
     model VARCHAR(255),
     type VARCHAR(255),
-    manufacturer_id INT NOT NULL REFERENCES manufacturers(id),
-    description VARCHAR(255),
+    manufacturer_id INT REFERENCES manufacturers(id),
+    description TEXT,
     stock_quantity INT,
     buying_cost INT,
     selling_price INT

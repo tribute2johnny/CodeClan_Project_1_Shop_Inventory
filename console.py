@@ -29,11 +29,10 @@ manufacturer_repository.save(manufacturer_5)
 
 #creates some base data for spaceships
 
-spaceship_1 = Spaceship("Vulture", "Fighter", manufacturer_2,  "The Vulture is a ship manufactured by Core Dynamics. The Vulture primarily serves as a heavy space-superiority fighter", 3, 400600, 623000)
+spaceship_1 = Spaceship("Vulture", "Fighter", manufacturer_2,  "The Vulture is a ship manufactured by Core Dynamics. The Vulture primarily serves as a heavy space-superiority fighter.", 3, 400600, 623000)
 spaceship_repository.save(spaceship_1)
 
-
-spaceship_2 = Spaceship("Fer De Lance", "Fighter", manufacturer_5, "The Fer-de-Lance is a heavy combat ship manufactured by Zorgon Peterson. It features a hull that is more resistant to damage from weapons than other medium ships,", 6, 700500, 988000)
+spaceship_2 = Spaceship("Fer De Lance", "Fighter", manufacturer_5, "The Fer-de-Lance is a heavy combat ship manufactured by Zorgon Peterson. It features a hull that is more resistant to damage from weapons than other medium ships.", 6, 700500, 988000)
 spaceship_repository.save(spaceship_2)
 
 spaceship_3 = Spaceship("Type-9 Heavy", "Freighter", manufacturer_4, "The Type-9 Heavy is a ship manufactured by Lakon Spaceways. It is the largest of Lakon's five freighter models, as well as the largest dedicated trading ship.", 12, 1200000, 1700000)
@@ -42,7 +41,7 @@ spaceship_repository.save(spaceship_3)
 spaceship_4 = Spaceship("Diamondback", "Explorer", manufacturer_4, "The Diamondback Explorer manufactured by Lakon Spaceways is a dual-role ship designed with both exploration and combat in mind.", 0, 120000, 200000)
 spaceship_repository.save(spaceship_4)
 
-spaceship_5 = Spaceship("Imperial Cutter", "Multipurpose", manufacturer_3, "The Imperial Cutter is a ship manufactured by Gutamaya for the Empire. It serves as the Imperial Navy's primary transport ship", 2, 540000, 770000)
+spaceship_5 = Spaceship("Imperial Cutter", "Multipurpose", manufacturer_3, "The Imperial Cutter is a ship manufactured by Gutamaya for the Empire. It serves as the Imperial Navy's primary transport ship.", 2, 540000, 770000)
 spaceship_repository.save(spaceship_5)
 
 spaceship_6 = Spaceship("Asp Explorer", "Explorer", manufacturer_4, "The Asp Explorer is a ship manufactured by Lakon Spaceways. Agile, well-armed for its size, and capable of achieving high jump ranges.", 7, 340000, 450000)
@@ -51,7 +50,7 @@ spaceship_repository.save(spaceship_6)
 spaceship_7 = Spaceship("Cobra MkIII", "Multipurpose", manufacturer_1, "The Cobra MkIII is a multipurpose ship manufactured by Faulcon DeLacy. A time-honoured and well-respected design.", 20, 100000, 145000)
 spaceship_repository.save(spaceship_7)
 
-spaceship_8 = Spaceship("Python", "Multipurpose", manufacturer_1, "The Python is a ship manufactured by Faulcon DeLacy. An iconic model, the Python pioneered modular ship design and singlehandedly revolutionized space travel", 0, 850000, 999000)
+spaceship_8 = Spaceship("Python", "Multipurpose", manufacturer_1, "The Python is a ship manufactured by Faulcon DeLacy. An iconic model, the Python pioneered modular ship design and singlehandedly revolutionized space travel.", 0, 850000, 999000)
 spaceship_repository.save(spaceship_8)
 
 spaceship_9 = Spaceship("Type-7 Transporter", "Freighter", manufacturer_4, "The Type-7 Transporter is a ship manufactured by Lakon Spaceways. A dedicated freighter with a classic design.", 1, 520000, 610000)
