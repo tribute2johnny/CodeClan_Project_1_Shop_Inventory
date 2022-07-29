@@ -1,0 +1,24 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+{% for spaceship in all_spaceships %}
+  
+<section>
+   <li> Model : {{ spaceship.model }}</li>
+   <li> Type : {{ spaceship.type }}</li>
+   <li> Manufacturer : {{ spaceship.manufacturer.name }}</li>
+   <li> Description : {{ spaceship.description }}</li>
+   <li> Stock : {{ spaceship.stock_quantity }}</li>
+   <li> Buying cost : {{ spaceship.buying_cost }}</li>
+   <li> selling price : {{ spaceship.selling_price }}</li>
+    <hr>
+
+
+
+
+</section>
+
+{% endfor %}
+
+{% endblock %}

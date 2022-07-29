@@ -65,12 +65,15 @@ spaceship_repository.save(spaceship_10)
 
 
 
+#prints all space ships to the terminal, tests the data and select all function.
+
+# result = spaceship_repository.select_all()
+
+# for spaceship in result:
+#     print(spaceship.__dict__)
 
 
 
 
 
-
-
-
-pdb.set_trace()
+# pdb.set_trace()

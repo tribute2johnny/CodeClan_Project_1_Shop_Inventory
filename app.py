@@ -1,11 +1,11 @@
 from flask import Flask, render_template
-from controllers.spaceship_controller import spaceship_blueprint
-from controllers.manufacturer_controller import manufacturer_blueprint
+from controllers.spaceship_controller import spaceships_blueprint
+from controllers.manufacturer_controller import manufacturers_blueprint
 
 app = Flask(__name__)
 
-app.register_blueprint(spaceship_blueprint)
-app.register_blueprint(manufacturer_blueprint)
+app.register_blueprint(spaceships_blueprint)
+app.register_blueprint(manufacturers_blueprint)
 
 
 @app.route('/')
