@@ -28,6 +28,8 @@ manufacturer_repository.save(manufacturer_4)
 manufacturer_5 = Manufacturer("Zorgon Peterson", "Zorgon Peterson is an independent manufacturer of ships and equipment in the galaxy. It produces a small yet eclectic range of ships, including small freighters and high-performance combat craft.")
 manufacturer_repository.save(manufacturer_5)
 
+manufacturer_6 = Manufacturer("Saud Kruger", "Saud Kruger is an independent corporation based in Bedaho that manufactures luxury passenger ships and equipment for the wealthy in the galaxy.")
+manufacturer_repository.save(manufacturer_6)
 
 
 
@@ -82,4 +84,4 @@ spaceship_repository.save(spaceship_10)
 
 
 
-pdb.set_trace()
+# pdb.set_trace()

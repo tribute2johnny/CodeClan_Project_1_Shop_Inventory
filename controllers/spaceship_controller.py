@@ -24,7 +24,7 @@ def delete(id):
     spaceship_repository.delete(id)
     return redirect('/spaceships')
 
-@spaceships_blueprint.route("/spaceships/add", methods=['GET'])
+@spaceships_blueprint.route("/spaceships/add")
 def add_spaceship():
     manufacturers = manufacturer_repository.select_all()
     return render_template("spaceships/add.html", all_manufacturers = manufacturers)
