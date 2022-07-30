@@ -57,3 +57,8 @@ def spaceships(manufacturer):
         spaceship = Spaceship(row['model'], row['type'], manufacturer, row['description'], row['stock_quantity'], row['buying_cost'], row['selling_price'], row['id'] )
         spaceships.append(spaceship)
     return spaceships
+
+def update_manufacturer(manufacturer):
+    sql = "UPDATE manufacturers SET ( name, description ) = (%s, %s) WHERE id = %s "
+    values = [manufacturer.name, manufacturer.description, manufacturer.id]
+    run_sql(sql,values)
