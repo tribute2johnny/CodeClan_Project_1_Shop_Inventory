@@ -7,7 +7,11 @@ import repositories.spaceship_repository as spaceship_repository
 import repositories.manufacturer_repository as manufacturer_repository
 
 
+manufacturer_repository.select_all()
+manufacturer_repository.delete_all()
+
 # creates some base data for manufacturers
+
 
 manufacturer_1 = Manufacturer("Faulcon DeLacy", "Faulcon DeLacy is an independent manufacturer of ships and equipment. They specialize in producing multipurpose and combat-oriented ships.")
 manufacturer_repository.save(manufacturer_1)
@@ -28,6 +32,8 @@ manufacturer_repository.save(manufacturer_5)
 
 
 spaceship_repository.select_all()
+spaceship_repository.delete_all()
+
 #creates some base data for spaceships
 
 spaceship_1 = Spaceship("Vulture", "Fighter", manufacturer_2,  "The Vulture is a ship manufactured by Core Dynamics. The Vulture primarily serves as a heavy space-superiority fighter.", 3, 400600, 623000)

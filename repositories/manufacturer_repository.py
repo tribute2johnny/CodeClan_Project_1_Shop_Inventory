@@ -33,6 +33,19 @@ def select_all():
         manufacturers.append(manufacturer)
     return manufacturers
 
+def delete_all():
+    sql = "DELETE  FROM manufacturers"
+    run_sql(sql)
+
+
+def delete(id):
+    sql = "DELETE  FROM manufacturers WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)
+
+
+
+
 def spaceships(manufacturer):
     spaceships = []
 

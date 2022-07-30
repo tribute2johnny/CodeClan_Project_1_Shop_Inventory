@@ -11,7 +11,10 @@
     <li> Buying Cost : {{ spaceship.buying_cost }} credits</li>
     <li> Selling Price : {{ spaceship.selling_price }} credits</li>
      <hr>
- 
+     <form action="/spaceships/{{ spaceship.id }}/delete" method="POST">
+     <input type="submit" value="DELETE">
+     </form>
+     <hr>
      
  
  

@@ -36,3 +36,15 @@ def select(id):
         manufacturer = manufacturer_repository.select(result['manufacturer_id'])
         spaceship = Spaceship(result['model'], result['type'], manufacturer, result['description'], result['stock_quantity'], result['buying_cost'], result['selling_price'], result['id'])
     return spaceship
+
+def delete_all():
+    sql = "DELETE  FROM spaceships"
+    run_sql(sql)
+
+
+def delete(id):
+    sql = "DELETE  FROM spaceships WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)
+
+def create()

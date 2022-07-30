@@ -2,20 +2,20 @@
 
 {% block content %}
 
-{% for manufacturer in all_manufacturers %}
+
   
 <section>
    <li> Company Name : {{ manufacturer.name }}</li>
    <li> Description : {{ manufacturer.description }}</li>
-   <li><a href="/show/{{ manufacturer.id }}"> View</a></li>
 
     <hr>
+    
 
 
 
 
 </section>
 
-{% endfor %}
+
 
 {% endblock %}

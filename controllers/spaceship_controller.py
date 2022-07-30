@@ -18,3 +18,8 @@ def spaceships():
 def view(id):
     spaceship = spaceship_repository.select(id)
     return render_template("/spaceships/view.html", spaceship=spaceship)
+
+@spaceships_blueprint.route('/spaceships/<id>/delete', methods=['POST'])
+def delete(id):
+    spaceship_repository.delete(id)
+    return redirect('/spaceships')
