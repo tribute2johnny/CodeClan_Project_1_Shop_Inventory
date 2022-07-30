@@ -7,7 +7,13 @@
     <li> Type : {{ spaceship.type }}</li>
     <li> Manufacturer : {{ spaceship.manufacturer.name }}</li>
     <li> Description : {{ spaceship.description }}</li>
-    <li> Stock : {{ spaceship.stock_quantity }} units</li>
+    {% if spaceship.stock_quantity == 0 %}
+    <li> Stock : {{ spaceship.stock_quantity }} Out Of Stock</li>
+    {% elif spaceship.stock_quantity <= 3 %}
+    <li> Stock : {{ spaceship.stock_quantity }} Low Stock</li>
+    {% else %}
+    <li> Stock : {{ spaceship.stock_quantity }} In Stock</li>
+    {% endif %}
     <li> Buying Cost : {{ spaceship.buying_cost }} credits</li>
     <li> Selling Price : {{ spaceship.selling_price }} credits</li>
      <hr>
