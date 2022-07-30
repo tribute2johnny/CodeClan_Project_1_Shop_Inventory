@@ -42,3 +42,23 @@ def create_spaceship():
     spaceship = Spaceship(model, type, manufacturer, description, stock_quantity, buying_cost, selling_price)
     spaceship_repository.save(spaceship)
     return redirect('/spaceships')
+
+@spaceships_blueprint.route('/spaceships/<id>/edit')
+def edit_spaceship(id):
+    spaceship = spaceship_repository.select(id)
+    manufacturers = manufacturer_repository.select_all()
+    return render_template('spaceships/edit.html', spaceship = spaceship, all_manufacturers = manufacturers)
+
+@spaceships_blueprint.route('/spaceships/<id>', methods=['POST'])
+def update_spaceship(id):
+    model = request.form['model']
+    type = request.form['type']
+    manufacturer_id = request.form['manufacturer_id']
+    description = request.form['description']
+    stock_quantity = request.form['stock_quantity']
+    buying_cost = request.form['buying_cost']
+    selling_price = request.form['selling_price']
+    manufacturer = manufacturer_repository.select(manufacturer_id)
+    spaceship = Spaceship(model, type, manufacturer, description, stock_quantity, buying_cost, selling_price, id)
+    spaceship_repository.update(spaceship)
+    return redirect('/spaceships')

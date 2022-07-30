@@ -46,3 +46,8 @@ def delete(id):
     values = [id]
     run_sql(sql, values)
 
+def update(spaceship):
+    sql = "UPDATE spaceships SET (model, type, manufacturer_id, description, stock_quantity, buying_cost, selling_price) = (%s, %s, %s, %s, %s, %s, %s) WHERE id = %s"
+    values = [spaceship.model, spaceship.type, spaceship.manufacturer.id, spaceship.description, spaceship.stock_quantity, spaceship.buying_cost, spaceship.selling_price, spaceship.id]
+    run_sql(sql, values)
+
