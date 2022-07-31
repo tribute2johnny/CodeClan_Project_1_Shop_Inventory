@@ -5,29 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/abd676f9eb.js" crossorigin="anonymous"></script>
     <title>Galactic Emporium</title>
 </head>
-    <header>
+
+  <body>
+     <header>
         
         <h1>The Galactic</h1>
         <h1>Emporium</h1>
     </header>
-        <nav>
-            <ul class="menu">
-            <li><a href="/">Home</a></li>
-            <li><a href="/spaceships">Inventory</a></li>
-            <li><a href="/spaceships/add">Add to Inventory</a></li>
-            <li><a href="/manufacturers">Our Partners</a></li>
-            <li><a href="/manufacturers/new">Become a Partner</a></li>
-            <li><a href="/about">About</a></li>
+        <nav class="menu">
+            
+            <a href="/"><i class="fa fa-fw fa-home"></i> Home</a>
+            <a href="/spaceships"><i class="fa-solid fa-database"></i> Inventory</a>
+            <a href="/spaceships/add"><i class="fa-solid fa-align-left"></i> Add to Inventory</a>
+            <a href="/manufacturers"><i class="fa-solid fa-people-group"></i> Our Partners</a>
+            <a href="/manufacturers/new"><i class="fa-solid fa-handshake"></i> Become a Partner</a>
+            <a href="/about"><i class="fa-solid fa-circle-info"></i> About</a>
             
             
-            
-            </ul>
         </nav>
         <section id="content">
             {% block content %}
     
             {% endblock %}
         </section>
+    </body>
     </html>
