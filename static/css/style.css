@@ -3,7 +3,7 @@ header {
     text-align: center;
     color: darkorange;
     margin: 0;
-    padding: 2px;
+    padding: 10px;
     background-repeat: no-repeat;
     background-size: cover;
     font-weight: bold;
@@ -20,8 +20,11 @@ body {
 .menu {
     background-color: darkorange;
     overflow: hidden;
-    border-left: 40px solid black;
-    border-right: 40px solid black;
+    border-left: 40px solid dodgerblue;
+    border-right: 40px solid dodgerblue;
+    border-bottom: 6px solid dodgerblue;
+    
+
 }
 
 .menu a {
@@ -35,6 +38,7 @@ body {
     border: 1px solid black;
     border-radius: 8px;
     display: block;
+    box-shadow: 5px 5px 10px black;
 }
 
 .menu a:hover {
@@ -42,10 +46,9 @@ body {
     color: black;
 }
 
-#content {
-    border-top: 20px solid black;
-    
-}
+
+
+
 
 #model1 {
     text-align: center;
@@ -103,7 +106,7 @@ footer {
     background-size: cover;
     background-repeat: no-repeat;
     margin: 0;
-    padding: 345px;
+    padding: 280px;
     
     
 }
