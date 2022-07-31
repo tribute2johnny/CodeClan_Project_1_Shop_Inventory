@@ -47,7 +47,7 @@ spaceship_repository.save(spaceship_2)
 spaceship_3 = Spaceship("Type-9 Heavy", "Freighter", manufacturer_4, "The Type-9 Heavy is a ship manufactured by Lakon Spaceways. It is the largest of Lakon's five freighter models, as well as the largest dedicated trading ship.", 12, 1200000, 1700000)
 spaceship_repository.save(spaceship_3)
 
-spaceship_4 = Spaceship("Diamondback", "Explorer", manufacturer_4, "The Diamondback Explorer manufactured by Lakon Spaceways is a dual-role ship designed with both exploration and combat in mind.", 0, 120000, 200000)
+spaceship_4 = Spaceship("Diamondback Explorer", "Explorer", manufacturer_4, "The Diamondback Explorer manufactured by Lakon Spaceways is a dual-role ship designed with both exploration and combat in mind.", 0, 120000, 200000)
 spaceship_repository.save(spaceship_4)
 
 spaceship_5 = Spaceship("Imperial Cutter", "Multipurpose", manufacturer_3, "The Imperial Cutter is a ship manufactured by Gutamaya for the Empire. It serves as the Imperial Navy's primary transport ship.", 2, 540000, 770000)

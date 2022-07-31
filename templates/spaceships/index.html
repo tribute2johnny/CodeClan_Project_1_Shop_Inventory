@@ -4,21 +4,35 @@
 
 {% for spaceship in all_spaceships %}
   
-<section>
-   <li><a href="/view/{{ spaceship.id }}"> Model : {{ spaceship.model }}</a></li>
-   <li> Type : {{ spaceship.type }}</li>
+<section id="section1">
+   <head>
+     
+     {% if spaceship.stock_quantity == 0 %}
+     <p id="stock1">
+     <i style="color:red">OUT OF STOCK</i>
+     </p>
+     {% elif spaceship.stock_quantity <= 3 %}
+     <p id="stock2">
+     <i style="color:goldenrod">LOW STOCK</i>
+     </p>
+     {% else %}
+     <p id="stock3">
+     <i style="color:green">IN STOCK</i> 
+     </p>
+     {% endif %}
+     <h1 id="model1">{{spaceship.model}}</h1>
+     
+   </head>
+   <li> Type : {{ spaceship.type }} class</li>
    <li> Manufacturer : {{ spaceship.manufacturer.name }}</li>
-   <li> Description : {{ spaceship.description }}</li>
-   {% if spaceship.stock_quantity == 0 %}
-   <li> Stock : {{ spaceship.stock_quantity }} <i style="color:red">OUT OF STOCK</i></li>
-   {% elif spaceship.stock_quantity <= 3 %}
-   <li> Stock : {{ spaceship.stock_quantity }} <i style="color:goldenrod">LOW STOCK</i></li>
-   {% else %}
-   <li> Stock : {{ spaceship.stock_quantity }}  <i style="color:green">IN STOCK</i> </li>
-   {% endif %}
+   <li> {{ spaceship.description }}</li>
+   <li> Stock Quantity: {{ spaceship.stock_quantity}} units</li>
    <li> Buying Cost : {{ spaceship.buying_cost }} credits</li>
    <li> Selling Price : {{ spaceship.selling_price }} credits</li>
+   <li> Mark Up : {{ (spaceship.selling_price - spaceship.buying_cost) / spaceship.buying_cost * 100|round(3) }} %</li>
     <hr>
+    <button id="view"><a href="/view/{{ spaceship.id }}">View {{spaceship.model}}</a></button>
+    
 
     
 
