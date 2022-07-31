@@ -20,9 +20,9 @@ body {
 .menu {
     background-color: darkorange;
     overflow: hidden;
-    border-left: 40px solid dodgerblue;
-    border-right: 40px solid dodgerblue;
-    border-bottom: 6px solid dodgerblue;
+    border-left: 120px solid darkorange;
+    border-right: 120px solid darkorange;
+    border-bottom: 5px solid darkorange;
     
 
 }
@@ -56,6 +56,7 @@ body {
     font-size: 40px;
     font-family: monospace;
     text-decoration: underline;
+    color: darkorange;
 }
 
 #stock1 {
@@ -77,6 +78,7 @@ body {
     margin: auto;
     font-size: 30px;
     border: 3px solid green;
+    
     
 }
 
@@ -106,7 +108,16 @@ footer {
     background-size: cover;
     background-repeat: no-repeat;
     margin: 0;
-    padding: 280px;
+    padding: 250px;
     
     
+}
+
+#home {
+    color: darkorange;
+    font-size: 60px;
+    background-color: black;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
 }
