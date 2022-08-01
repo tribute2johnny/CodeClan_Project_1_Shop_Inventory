@@ -7,6 +7,11 @@
 <section>
    <li> Company Name : {{ manufacturer.name }}</li>
    <li> Description : {{ manufacturer.description }}</li>
+   {% if manufacturer.active == true %}
+   <p>Active</p>
+   {% else %}
+   <p>Deactivated</p>
+   {% endif %}
    <li><a href="/show/{{ manufacturer.id }}"> View</a></li>
 
     <hr>

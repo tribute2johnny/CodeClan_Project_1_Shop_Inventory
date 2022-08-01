@@ -15,7 +15,9 @@
         <label for="manufacturer">Manufacturer:</label>
         <select name="manufacturer_id" id="manufacturer">
             {% for manufacturer in all_manufacturers %}
+            {% if manufacturer.active == True %}
             <option value="{{ manufacturer.id }}" required>{{ manufacturer.name }}</option>
+            {% endif %}
             {% endfor %}
         </select>
     </div>

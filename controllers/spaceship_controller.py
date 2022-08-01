@@ -62,3 +62,4 @@ def update_spaceship(id):
     spaceship = Spaceship(model, type, manufacturer, description, stock_quantity, buying_cost, selling_price, id)
     spaceship_repository.update(spaceship)
     return redirect('/spaceships')
+

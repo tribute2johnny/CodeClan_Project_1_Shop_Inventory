@@ -13,22 +13,22 @@ manufacturer_repository.delete_all()
 # creates some base data for manufacturers
 
 
-manufacturer_1 = Manufacturer("Faulcon DeLacy", "Faulcon DeLacy is an independent manufacturer of ships and equipment. They specialize in producing multipurpose and combat-oriented ships.")
+manufacturer_1 = Manufacturer("Faulcon DeLacy", "Faulcon DeLacy is an independent manufacturer of ships and equipment. They specialize in producing multipurpose and combat-oriented ships.", True)
 manufacturer_repository.save(manufacturer_1)
 
-manufacturer_2 = Manufacturer("Core Dynamics", "Core Dynamics specializes in producing high-performance combat ships, and is the primary supplier of ships for the Federal Navy.")
+manufacturer_2 = Manufacturer("Core Dynamics", "Core Dynamics specializes in producing high-performance combat ships, and is the primary supplier of ships for the Federal Navy.", True)
 manufacturer_repository.save(manufacturer_2)
 
-manufacturer_3 = Manufacturer("Gautemaya", "Gutamaya, also known as Imperial Gutamaya, is an Imperial manufacturer of ships and various equipment. It specialises in producing combat and multipurpose ships known for their sleek, elegant designs, and is the primary supplier of ships for the Imperial Navy.")
+manufacturer_3 = Manufacturer("Gautemaya", "Gutamaya, also known as Imperial Gutamaya, is an Imperial manufacturer of ships and various equipment. It specialises in producing combat and multipurpose ships known for their sleek, elegant designs, and is the primary supplier of ships for the Imperial Navy.", True)
 manufacturer_repository.save(manufacturer_3)
 
-manufacturer_4 = Manufacturer("Lakon Spaceways", "Lakon Spaceways is an Allied manufacturer of ships. It specialises in producing durable, utilitarian freighters and exploration vessels.")
+manufacturer_4 = Manufacturer("Lakon Spaceways", "Lakon Spaceways is an Allied manufacturer of ships. It specialises in producing durable, utilitarian freighters and exploration vessels.", True)
 manufacturer_repository.save(manufacturer_4)
 
-manufacturer_5 = Manufacturer("Zorgon Peterson", "Zorgon Peterson is an independent manufacturer of ships and equipment in the galaxy. It produces a small yet eclectic range of ships, including small freighters and high-performance combat craft.")
+manufacturer_5 = Manufacturer("Zorgon Peterson", "Zorgon Peterson is an independent manufacturer of ships and equipment in the galaxy. It produces a small yet eclectic range of ships, including small freighters and high-performance combat craft.", True)
 manufacturer_repository.save(manufacturer_5)
 
-manufacturer_6 = Manufacturer("Saud Kruger", "Saud Kruger is an independent corporation based in Bedaho that manufactures luxury passenger ships and equipment for the wealthy in the galaxy.")
+manufacturer_6 = Manufacturer("Saud Kruger", "Saud Kruger is an independent corporation based in Bedaho that manufactures luxury passenger ships and equipment for the wealthy in the galaxy.", True)
 manufacturer_repository.save(manufacturer_6)
 
 

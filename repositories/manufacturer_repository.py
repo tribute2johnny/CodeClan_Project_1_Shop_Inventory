@@ -4,8 +4,8 @@ from models.manufacturer import Manufacturer
 from models.spaceship import Spaceship
 
 def save(manufacturer):
-    sql = "INSERT INTO manufacturers ( name, description ) VALUES (%s, %s) RETURNING *"
-    values = [manufacturer.name, manufacturer.description]
+    sql = "INSERT INTO manufacturers ( name, description, active ) VALUES (%s, %s, %s) RETURNING *"
+    values = [manufacturer.name, manufacturer.description, manufacturer.active]
     results = run_sql(sql, values)
     id = results[0]['id']
     manufacturer.id = id
@@ -20,7 +20,7 @@ def select(id):
 
     if results:
         result = results[0]
-        manufacturer = Manufacturer(result['name'], result["description"], result['id'])
+        manufacturer = Manufacturer(result['name'], result["description"], result["active"], result['id'])
     return manufacturer
 
 def select_all():
@@ -29,7 +29,7 @@ def select_all():
     results = run_sql(sql)
 
     for row in results:
-        manufacturer = Manufacturer(row['name'], row['description'], row['id'] )
+        manufacturer = Manufacturer(row['name'], row['description'], row['active'], row['id'] )
         manufacturers.append(manufacturer)
     return manufacturers
 
@@ -59,6 +59,6 @@ def spaceships(manufacturer):
     return spaceships
 
 def update_manufacturer(manufacturer):
-    sql = "UPDATE manufacturers SET ( name, description ) = (%s, %s) WHERE id = %s "
-    values = [manufacturer.name, manufacturer.description, manufacturer.id]
+    sql = "UPDATE manufacturers SET ( name, description, active ) = (%s, %s, %s) WHERE id = %s "
+    values = [manufacturer.name, manufacturer.description, manufacturer.active, manufacturer.id]
     run_sql(sql,values)

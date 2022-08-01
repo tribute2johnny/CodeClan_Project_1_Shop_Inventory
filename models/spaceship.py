@@ -8,10 +8,11 @@ class Spaceship:
         self.stock_quantity = stock_quantity
         self.buying_cost = buying_cost
         self.selling_price = selling_price
-        
-        
         self.id = id
 
 
-    
+    def mark_up(self):
+        mark_up = round((self.selling_price - self.buying_cost) / self.buying_cost * 100, 2)
+        return mark_up
+        
 

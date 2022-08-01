@@ -30,7 +30,8 @@ def new_manufacturer():
 def create_manufacturer():
     name = request.form['name']
     description = request.form['description']
-    manufacturer = Manufacturer(name, description)
+    active = request.form['active']
+    manufacturer = Manufacturer(name, description, active)
     manufacturer_repository.save(manufacturer)
     return redirect('/manufacturers')
 
@@ -43,6 +44,7 @@ def edit_manufacturer(id):
 def update_manufacturer(id):
     name = request.form['name']
     description = request.form['description']
-    manufacturer = Manufacturer(name, description, id)
+    active = request.form['active']
+    manufacturer = Manufacturer(name, description, active, id)
     manufacturer_repository.update_manufacturer(manufacturer)
     return redirect('/manufacturers')
