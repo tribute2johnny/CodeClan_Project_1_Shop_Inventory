@@ -30,7 +30,7 @@
    <li> Buying Cost : {{ spaceship.buying_cost }} credits</li>
    <li> Selling Price : {{ spaceship.selling_price }} credits</li>
    <li> Mark Up : {{ ((spaceship.selling_price - spaceship.buying_cost) / spaceship.buying_cost * 100)|round(2) }} %</li>
-    <hr>
+    <hr id="hr1">
     <button id="view"><a href="/view/{{ spaceship.id }}">View {{spaceship.model}}</a></button>
     
 

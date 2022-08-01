@@ -121,3 +121,11 @@ footer {
     text-align: center;
     padding: 20px;
 }
+
+#hr1 {
+    background-color: darkorange;
+    padding: 3px;
+    color: darkorange;
+    margin: auto;
+    border: solid 1px darkorange;
+}
