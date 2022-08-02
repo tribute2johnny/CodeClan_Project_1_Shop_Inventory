@@ -9,6 +9,7 @@ header {
     font-weight: bold;
     font-size: 35px;
     font-family: 'Gugi', cursive;
+    border-top: 8px solid darkorange;
     
 }
 
@@ -46,6 +47,12 @@ body {
     background-color: dodgerblue;
     color: black;
 }
+
+.menu a:active {
+    background-color: darkorange;
+    box-shadow: 0 5px black;
+    transform: translateY(4px);
+  }
 
 
 
@@ -88,7 +95,16 @@ body {
     display: block;
     background-color: yellow;
     font-size: large;
+    border-radius: 8px;
     
+
+}
+
+#view2 {
+    margin: auto;
+    background-color: yellow;
+    font-size: large;
+    border-radius: 8px;
 
 }
 
@@ -104,12 +120,36 @@ body {
     
 }
 
-footer {
+#section2 {
+    border-top: 30px black solid;
+    border-right: 30px black solid;
+    border-bottom: 20px darkorange solid;
+    border-left: 20px darkorange solid;
+    justify-content: center;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    
+}
+
+#section3 {
     background-image:url('/static/images/footer.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
     margin: 0;
     padding: 250px;
+    
+
+}
+
+footer {
+  background-color: darkorange;
+  text-align: center;
+  font-size: 25px;
+  font-family: 'Gugi', cursive;
+  padding: 2px;
+  margin: auto;
+
     
     
 }
@@ -147,7 +187,8 @@ footer {
     border: 2px solid black;
     color: whitesmoke;
     font-size: 15px;
-    
+    border-radius: 8px;
+    outline: none;
 
 }
 
@@ -157,34 +198,74 @@ footer {
 
 }
 
-
-
 #form1 {
     display: block;
     float: right;
     
 }
 
+#form2 {
+    
+    text-align: center;
+    font-size: 30px;
+}
+
+input {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid darkorange;
+    border-radius: 8px;
+    font-size: 20px;
+}
 
 #button1 {
-    padding: 16px 16px;
     border: 1px solid black;
-    background-color: darkorange;
-    box-shadow: 5px 5px 10px black;
-    color: whitesmoke;
-    font-size: 15px;
+    background-color: black;
+    color: darkorange;
+    font-size: 20px;
+    border-radius: 8px;
 
 
 }
 
 #button1:hover {
-    background-color: green;
+    background-color: dodgerblue;
     color: black;
 
 }
+
+#button1:active {
+    background-color: darkorange;
+    box-shadow: 0 5px black;
+    transform: translateY(4px);
+  }
+
 
 #text1 {
     font-size: 20px;
     font-family: 'Gugi', cursive;
     color: whitesmoke;
+}
+
+textarea {
+    width: 70%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid darkorange;
+    border-radius: 8px;
+    resize: none;
+    font-size: 25px;
+}
+
+#activate {
+    font-size: 40px;
+    text-align: center;
+}
+
+#delete {
+    text-align: center;
+    
 }

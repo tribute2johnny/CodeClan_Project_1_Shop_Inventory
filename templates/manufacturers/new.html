@@ -1,27 +1,26 @@
 {% extends "base.html" %}
 {% block content %}
 
-<!-- couldn't get the manufacturer to save to the database until i changed methods to method for the post request -->
-
-<form action="/manufacturers" method="post">
+<section id="section2">
+<form id="form2" action="/manufacturers" method="post">
     <div>
-        <label for="name">Company Name</label>
+        <label for="name"></label>
         <input type="text" id="name" name="name" description="name" placeholder="Company Name" required autofocus>
     </div>
     <div>
         <label for="active">Status :</label>
-        <select name="active" id="active">
+        <select name="active" id="select1">
             <option value="true">Active</option>
             <option value="false">Deactivated</option>
         </select>
     </div>
     <div>
         <label for="description"></label>
-        <textarea name="description" id="description" placeholder="Description" cols="30" rows="6" required></textarea>
+        <textarea name="description" id="description" placeholder="Add some details about your company...." cols="30" rows="6" required></textarea>
     </div>
     <div>
-        <button type="submit">Add Manufacturer</button>
+        <button id="view" type="submit">Add Manufacturer</button>
     </div>
 </form>
-
+</section>
 {% endblock %}

@@ -1,19 +1,31 @@
 {% extends "base.html" %}
 {% block content %}
-
-<form action="/spaceships" method="post">
+<section id="section2">
+<form id="form2" action="/spaceships" method="post">
 
     <div>
-        <label for="Model">Model</label>
+        <label for="Model"></label>
         <input type="text" id="model" name="model" placeholder="Model" required autofocus>
     </div>
     <div>
-        <label for="type">Type</label>
+        <label for="type"></label>
         <input type="text" id="type" name="type" placeholder="Type" required>
     </div>
     <div>
-        <label for="manufacturer">Manufacturer:</label>
-        <select name="manufacturer_id" id="manufacturer">
+        <label for="stock_quantity"></label>
+        <input type="number" id="stock_quantity" name="stock_quantity" placeholder="Stock Quantity" required>
+    </div>
+    <div>
+        <label for="buying_cost"></label>
+        <input type="number" id="buying_cost" name="buying_cost" placeholder="Buying Cost" required>
+    </div>
+    <div>
+        <label for="selling_price"></label>
+        <input type="number" id="selling_price" name="selling_price" placeholder="Selling Price" required>
+    </div>
+    <div>
+        <label for="manufacturer">Manufacturer :</label>
+        <select name="manufacturer_id" id="select1">
             {% for manufacturer in all_manufacturers %}
             {% if manufacturer.active == True %}
             <option value="{{ manufacturer.id }}" required>{{ manufacturer.name }}</option>
@@ -22,22 +34,11 @@
         </select>
     </div>
     <div>
-        <label for="stock_quantity">Stock Quantity</label>
-        <input type="number" id="stock_quantity" name="stock_quantity" placeholder="Stock Quantity" required>
-    </div>
-    <div>
-        <label for="buying_cost">Buying Cost</label>
-        <input type="number" id="buying_cost" name="buying_cost" placeholder="Buying Cost" required>
-    </div>
-    <div>
-        <label for="selling_price">Selling Price</label>
-        <input type="number" id="selling_price" name="selling_price" placeholder="Selling Price" required>
-    </div>
-    <div>
         <label for="description"></label>
         <textarea name="description" id="description" placeholder="Description" cols="30" rows="6" required></textarea>
     </div>
-    <button type="submit">Add Spaceship</button>
+    <hr id="hr1">
+    <button id="view" type="submit">Add Spaceship</button>
 </form>
-
+</section>
 {% endblock %}

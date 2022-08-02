@@ -30,7 +30,7 @@
 
             <form action="/spaceships/manufacturers" id="form1" method="post">
                 <div>
-                 <label for="manufacturer" id="text1">Select by Manufacturer :   </label>
+                 <label for="manufacturer" id="text1">Filter by Manufacturer :   </label>
                  <select name="manufacturer_id" id="select1">
                      {% for manufacturer in all_manufacturers %}
                      <option value="{{manufacturer.id}}">
@@ -39,7 +39,7 @@
                  </option>
                  {% endfor %}
                  </select>
-                 <button type="submit" id="button1">View</button>
+                 <button type="submit" id="button1"><i class="fa-solid fa-circle-right"></i></button>
             </form>
 
             
@@ -50,8 +50,11 @@
     
             {% endblock %}
         </section>
+        <section id="section3">
+
+        </section>
         <footer id="foot">
-           
+           <p>The Galactic Spacehip Emporium <i class="fa-solid fa-trademark"></i></p>
         </footer>
     </body>
     </html>

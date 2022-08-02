@@ -1,26 +1,26 @@
 {% extends "base.html" %}
 {% block content %}
 
-
-<form action="/manufacturers/{{manufacturer.id}}" method="post">
+<section id="section2">
+<form id="form2" action="/manufacturers/{{manufacturer.id}}" method="post">
     <div>
-        <label for="name">Company Name</label>
+        <label for="name"></label>
         <input type="text" id="name" name="name" value="{{manufacturer.name}}" required autofocus>
     </div>
     <div>
         <label for="active">Status :</label>
-        <select name="active" id="active">
+        <select name="active" id="select1">
             <option value="true">Active</option>
             <option value="false">Deactivated</option>
         </select>
     </div>
     <div>
         <label for="description"></label>
-        <textarea name="description" id="description" value="{{manufacturer.description}}" cols="30" rows="6" required></textarea>
+        <textarea name="description" id="description" value="{{manufacturer.description}}" placeholder="Add some details about your company...." cols="50" rows="10" required></textarea>
     </div>
     <div>
-        <button type="submit">Update Manufacturer</button>
+        <button id="view" type="submit">Update Manufacturer</button>
     </div>
 </form>
-
+</section>
 {% endblock %}

@@ -4,20 +4,20 @@
 
 
   
-<section>
-   <li> Company Name : {{ manufacturer.name }}</li>
-   <li> Description : {{ manufacturer.description }}</li>
+<section id="section1">
+   <h1 id="model1">{{ manufacturer.name }}</li></h1>
+   <p>Description : {{ manufacturer.description }}</p> 
    {% if manufacturer.active == true %}
-   <p>Active</p>
+   <p id="activate" style="color: greenyellow;">Active <i class="fa-solid fa-thumbs-up"></i></p>
    {% else %}
-   <p>Deactivated</p>
+   <p id="activate" style="color: red">Deactivated <i class="fa-solid fa-thumbs-down"></i></p>
    {% endif %}
-
+   <hr id="hr1">
    <div>
-    <li><a href="/manufacturers/{{manufacturer.id}}/edit">Edit Manufacturer Details</a></li>
+    <button id="view"><a href="/manufacturers/{{manufacturer.id}}/edit">Edit Manufacturer Details</a></button>
  </div>
 
-    <hr>
+   
     
 
 

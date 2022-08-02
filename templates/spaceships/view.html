@@ -20,18 +20,18 @@
         {% endif %}
    
       </head>
-    <li> Type : {{ spaceship.type }}</li>
+    <li> Type : {{ spaceship.type }} <button id="view2"><a href="/spaceships/type/{{spaceship.type}}">View all in this class</a> </button></li>
     <li> Manufacturer : {{ spaceship.manufacturer.name }}</li>
-    <li> Description : {{ spaceship.description }}</li>
+    <li> {{ spaceship.description }}</li>
     <li> Stock Quantity: {{ spaceship.stock_quantity}} units</li>
     <li> Buying Cost : {{ spaceship.buying_cost }} credits</li>
     <li> Selling Price : {{ spaceship.selling_price }} credits</li>
     <li> Mark Up : {{ spaceship.mark_up()}} %</li>
      <hr id="hr1">
      <div>
-        <li><a href="/spaceships/{{spaceship.id}}/edit">Edit Spaceship Details</a></li>
+        <button id="view"><a href="/spaceships/{{spaceship.id}}/edit">Edit Spaceship Details</a></button>
      </div>
-     <form action="/spaceships/{{ spaceship.id }}/delete" method="POST">
+     <form id="delete" action="/spaceships/{{ spaceship.id }}/delete" method="POST">
      <input type="submit" value="DELETE">
      </form>
     
