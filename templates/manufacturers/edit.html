@@ -8,15 +8,15 @@
         <input type="text" id="name" name="name" value="{{manufacturer.name}}" required autofocus>
     </div>
     <div>
-        <label for="description"></label>
-        <textarea name="description" id="description" value="{{manufacturer.description}}" cols="30" rows="6" required></textarea>
-    </div>
-    <div>
         <label for="active">Status :</label>
         <select name="active" id="active">
             <option value="true">Active</option>
             <option value="false">Deactivated</option>
         </select>
+    </div>
+    <div>
+        <label for="description"></label>
+        <textarea name="description" id="description" value="{{manufacturer.description}}" cols="30" rows="6" required></textarea>
     </div>
     <div>
         <button type="submit">Update Manufacturer</button>

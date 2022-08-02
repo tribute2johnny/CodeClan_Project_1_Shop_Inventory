@@ -5,19 +5,24 @@ from models.spaceship import Spaceship
 
 from repositories import spaceship_repository, manufacturer_repository
 
+from repositories.manufacturer_repository import select_all
+
+
 spaceships_blueprint = Blueprint("spaceships", __name__)
 
 #get method redirects to a page showing a list of all items in inventory
 @spaceships_blueprint.route("/spaceships")
 def spaceships():
+    all_manufacturers = select_all()
     spaceships = spaceship_repository.select_all()
-    return render_template("spaceships/index.html", all_spaceships = spaceships)
+    return render_template("spaceships/index.html", all_spaceships = spaceships, all_manufacturers = all_manufacturers)
 
 
 @spaceships_blueprint.route("/view/<id>")
 def view(id):
+    all_manufacturers = select_all()
     spaceship = spaceship_repository.select(id)
-    return render_template("/spaceships/view.html", spaceship = spaceship)
+    return render_template("/spaceships/view.html", spaceship = spaceship, all_manufacturers = all_manufacturers)
 
 @spaceships_blueprint.route('/spaceships/<id>/delete', methods=['POST'])
 def delete(id):
@@ -63,8 +68,16 @@ def update_spaceship(id):
     spaceship_repository.update(spaceship)
     return redirect('/spaceships')
 
-@spaceships_blueprint.route('/spaceships/manufacturers/<id>')
-def view_by_manufacturer(id):
-    spaceships = spaceship_repository.get_products_by_manufacturer(id)
-    return render_template('/spaceships/index.html', all_spaceships = spaceships)
 
+@spaceships_blueprint.route('/spaceships/type/<type>')
+def view_by_type(type):
+    all_manufacturers = select_all()
+    spaceships = spaceship_repository.get_products_by_type(type)
+    return render_template('/spaceships/index.html', all_spaceships = spaceships, all_manufacturers=all_manufacturers)
+
+@spaceships_blueprint.route('/spaceships/manufacturers', methods=['POST'])
+def view_by_manufacturer():
+    id = request.form['manufacturer_id']
+    all_manufacturers = select_all()
+    spaceships = spaceship_repository.get_products_by_manufacturer(id)
+    return render_template('/spaceships/index.html', all_spaceships = spaceships, all_manufacturers=all_manufacturers)

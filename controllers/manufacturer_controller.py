@@ -5,6 +5,8 @@ from models.manufacturer import Manufacturer
 
 from repositories import manufacturer_repository
 
+from repositories.manufacturer_repository import select_all
+
 manufacturers_blueprint = Blueprint("manufacturers", __name__)
 
 @manufacturers_blueprint.route("/manufacturers")
@@ -15,7 +17,8 @@ def manufacturers():
 @manufacturers_blueprint.route("/show/<id>")
 def show(id):
     manufacturer = manufacturer_repository.select(id)
-    return render_template("/manufacturers/show.html", manufacturer=manufacturer)
+    all_manufacturers = select_all()
+    return render_template("/manufacturers/show.html", manufacturer=manufacturer, all_manufacturers=all_manufacturers)
 
 @manufacturers_blueprint.route('/manufacturers/<id>/delete', methods=['POST'])
 def delete(id):
@@ -24,7 +27,8 @@ def delete(id):
 
 @manufacturers_blueprint.route('/manufacturers/new')
 def new_manufacturer():
-    return render_template("manufacturers/new.html")
+    all_manufacturers = select_all()
+    return render_template("manufacturers/new.html", all_manufacturers=all_manufacturers)
 
 @manufacturers_blueprint.route('/manufacturers', methods=['POST'])
 def create_manufacturer():
@@ -37,8 +41,9 @@ def create_manufacturer():
 
 @manufacturers_blueprint.route('/manufacturers/<id>/edit')
 def edit_manufacturer(id):
+    all_manufacturers = select_all()
     manufacturer = manufacturer_repository.select(id)
-    return render_template('manufacturers/edit.html', manufacturer = manufacturer)
+    return render_template('manufacturers/edit.html', manufacturer = manufacturer, all_manufacturers = all_manufacturers)
 
 @manufacturers_blueprint.route('/manufacturers/<id>', methods=['POST'])
 def update_manufacturer(id):

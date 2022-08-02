@@ -27,6 +27,21 @@
             <a href="/manufacturers"><i class="fa-solid fa-people-group"></i> Our Partners</a>
             <a href="/manufacturers/new"><i class="fa-solid fa-handshake"></i> Become a Partner</a>
             <a href="/about"><i class="fa-solid fa-circle-info"></i> About</a>
+
+            <form action="/spaceships/manufacturers" method="post">
+                <div>
+                 <label for="manufacturer">Manufacturer</label>
+                 <select name="manufacturer_id" id="manufacturer">
+                     {% for manufacturer in all_manufacturers %}
+                     <option value="{{manufacturer.id}}">
+                     
+                     {{ manufacturer.name }}
+                 </option>
+                 {% endfor %}
+                 </select>
+                 <button type="submit">View</button>
+            </form>
+
             
             
         </nav>

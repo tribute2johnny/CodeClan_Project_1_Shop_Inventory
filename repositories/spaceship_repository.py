@@ -64,3 +64,15 @@ def get_products_by_manufacturer(id):
         spaceship = Spaceship(row['model'], row['type'], manufacturer, row['description'], row['stock_quantity'], row['buying_cost'], row['selling_price'], row['id'] )
         spaceships.append(spaceship)
     return spaceships
+
+def get_products_by_type(type):
+    spaceships = []
+    sql = "SELECT * FROM spaceships WHERE type = %s"
+    values = [type]
+    results = run_sql(sql, values)
+
+    for row in results:
+        manufacturer = manufacturer_repository.select(row['manufacturer_id'])
+        spaceship = Spaceship(row['model'], row['type'], manufacturer, row['description'], row['stock_quantity'], row['buying_cost'], row['selling_price'], row['id'] )
+        spaceships.append(spaceship)
+    return spaceships
