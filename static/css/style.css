@@ -15,6 +15,7 @@ header {
 body {
     margin: 0;
     padding: 0;
+    
 }
 
 .menu {
@@ -129,3 +130,8 @@ footer {
     margin: auto;
     border: solid 1px darkorange;
 }
+
+#content {
+    border-left: solid black 120px;
+    border-right: solid black 120px;
+} 

@@ -63,3 +63,8 @@ def update_spaceship(id):
     spaceship_repository.update(spaceship)
     return redirect('/spaceships')
 
+@spaceships_blueprint.route('/spaceships/manufacturers/<id>')
+def view_by_manufacturer(id):
+    spaceships = spaceship_repository.get_products_by_manufacturer(id)
+    return render_template('/spaceships/index.html', all_spaceships = spaceships)
+

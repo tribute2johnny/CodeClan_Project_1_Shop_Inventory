@@ -24,6 +24,8 @@ def select_all():
         spaceships.append(spaceship)
     return spaceships
 
+
+
 def select(id):
     spaceship = None
     sql = "SELECT * FROM spaceships WHERE id = %s"
@@ -51,3 +53,14 @@ def update(spaceship):
     values = [spaceship.model, spaceship.type, spaceship.manufacturer.id, spaceship.description, spaceship.stock_quantity, spaceship.buying_cost, spaceship.selling_price, spaceship.id]
     run_sql(sql, values)
 
+def get_products_by_manufacturer(id):
+    spaceships = []
+    sql = "SELECT * FROM spaceships WHERE manufacturer_id = %s"
+    values = [id]
+    results = run_sql(sql, values)
+
+    for row in results:
+        manufacturer = manufacturer_repository.select(row['manufacturer_id'])
+        spaceship = Spaceship(row['model'], row['type'], manufacturer, row['description'], row['stock_quantity'], row['buying_cost'], row['selling_price'], row['id'] )
+        spaceships.append(spaceship)
+    return spaceships
