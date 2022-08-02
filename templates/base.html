@@ -28,10 +28,10 @@
             <a href="/manufacturers/new"><i class="fa-solid fa-handshake"></i> Become a Partner</a>
             <a href="/about"><i class="fa-solid fa-circle-info"></i> About</a>
 
-            <form action="/spaceships/manufacturers" method="post">
+            <form action="/spaceships/manufacturers" id="form1" method="post">
                 <div>
-                 <label for="manufacturer">Manufacturer</label>
-                 <select name="manufacturer_id" id="manufacturer">
+                 <label for="manufacturer" id="text1">Select by Manufacturer :   </label>
+                 <select name="manufacturer_id" id="select1">
                      {% for manufacturer in all_manufacturers %}
                      <option value="{{manufacturer.id}}">
                      
@@ -39,7 +39,7 @@
                  </option>
                  {% endfor %}
                  </select>
-                 <button type="submit">View</button>
+                 <button type="submit" id="button1">View</button>
             </form>
 
             
