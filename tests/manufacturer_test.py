@@ -5,7 +5,7 @@ from models.manufacturer import Manufacturer
 class TestManufacturer(unittest.TestCase):
 
     def setUp(self):
-        self.manufacturer = Manufacturer("Faulcon DeLacy", "description goes here")
+        self.manufacturer = Manufacturer("Faulcon DeLacy", "description goes here", True)
         
     def test_manufacturer_has_name(self):
         self.assertEqual("Faulcon DeLacy", self.manufacturer.name)

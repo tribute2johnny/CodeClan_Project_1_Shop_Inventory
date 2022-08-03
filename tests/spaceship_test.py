@@ -5,7 +5,7 @@ from models.spaceship import Spaceship
 class TestSpaceship(unittest.TestCase):
 
     def setUp(self):
-        self.spaceship = Spaceship("Python", "Multipurpose", "description goes here", 10, 690800, 999600)
+        self.spaceship = Spaceship("Python", "Multipurpose", "Lakon Spaceways", "description goes here", 10, 690800, 999600)
 
     def test_spaceship_has_model(self):
         self.assertEqual("Python", self.spaceship.model)
