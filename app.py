@@ -14,5 +14,10 @@ def home():
     all_manufacturers = select_all()
     return render_template('index.html', all_manufacturers = all_manufacturers)
 
+@app.route('/about')
+def about():
+    all_manufacturers = select_all()
+    return render_template('about.html', all_manufacturers=all_manufacturers)
+
 if __name__ == '__main__':
     app.run(debug=True)

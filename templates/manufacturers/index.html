@@ -6,7 +6,7 @@
   
 <section id="section1">
    <h1 id="model1">{{ manufacturer.name }}</li></h1>
-   <p>Description : {{ manufacturer.description }}</p>
+   <p>{{ manufacturer.description }}</p>
    {% if manufacturer.active == true %}
    <p id="activate" style="color: greenyellow">Active <i class="fa-solid fa-thumbs-up"></i></p>
    {% else %}
